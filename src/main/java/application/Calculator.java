@@ -66,11 +66,11 @@ public class Calculator {
 		return Math.pow(u, 2)/r;
 	}
 
-	public double sAusRundI(double r, double i) {
+	public double uAusRundI(double r, double i) {
 		return r*i;
 	}
 
-	public double sAusPundI(double p, double i){
+	public double uAusPundI(double p, double i){
 			return p/i;
 		}
 
