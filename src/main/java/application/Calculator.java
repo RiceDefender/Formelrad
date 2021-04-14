@@ -66,14 +66,16 @@ public class Calculator {
 		return Math.pow(u, 2)/r;
 	}
 
-	public double Spannung(Calculator calc){
-		if (calc.getWiderstand() != 0  && calc.getStrom() != 0){
-			return calc.getWiderstand()*calc.getStrom();
+	public double uAusRundI(double r, double i) {
+		return r*i;
+	}
+
+	public double uAusPundI(double p, double i){
+			return p/i;
 		}
-		else if (calc.getLeistung() != 0 && calc.getStrom() != 0){
-			return calc.getLeistung()/calc.getStrom();
-		}
-		return Math.sqrt(calc.getLeistung()*calc.getWiderstand());
+
+	public double uAusPundR(double p, double r){
+		return Math.sqrt(p*r);
 	}
 
 }
