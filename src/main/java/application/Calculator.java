@@ -1,5 +1,6 @@
 package application;
 
+import java.lang.Math;
 /**
  * Berechnet das Formelrad
  * @author Peter Rutschmann
@@ -49,8 +50,9 @@ public class Calculator {
 		 */
 	}
 	
-	/* Hier die Methoden mit den Formlen hinzufügen
+	/* Hier die Methoden mit den Formlen hinzufï¿½gen
 	 */
+
 
 	public double pAusUundI(double u, double i){
 		return u*i;
@@ -63,4 +65,15 @@ public class Calculator {
 	public double pAusUundR(double u, double r){
 		return Math.pow(u, 2)/r;
 	}
+
+	public double Spannung(Calculator calc){
+		if (calc.getWiderstand() != 0  && calc.getStrom() != 0){
+			return calc.getWiderstand()*calc.getStrom();
+		}
+		else if (calc.getLeistung() != 0 && calc.getStrom() != 0){
+			return calc.getLeistung()/calc.getStrom();
+		}
+		return Math.sqrt(calc.getLeistung()*calc.getWiderstand());
+	}
+
 }
