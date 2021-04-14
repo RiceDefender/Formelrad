@@ -69,8 +69,9 @@ public class Calculator {
 	public double sAusRundI(double r, double i) {
 		return r*i;
 	}
-		else if (calc.getLeistung() != 0 && calc.getStrom() != 0){
-			return calc.getLeistung()/calc.getStrom();
+
+	public double sAusPundI(double p, double i){
+			return p/i;
 		}
 		return Math.sqrt(calc.getLeistung()*calc.getWiderstand());
 	}
