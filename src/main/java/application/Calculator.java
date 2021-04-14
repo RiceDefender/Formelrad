@@ -66,6 +66,10 @@ public class Calculator {
 		return Math.pow(u, 2)/r;
 	}
 
+	public double iAusPundR(double p, double r){
+		return Math.sqrt(p/r);
+	}
+
 	public double Spannung(Calculator calc){
 		if (calc.getWiderstand() != 0  && calc.getStrom() != 0){
 			return calc.getWiderstand()*calc.getStrom();
