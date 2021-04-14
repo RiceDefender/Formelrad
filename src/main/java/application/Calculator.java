@@ -70,6 +70,10 @@ public class Calculator {
 		return Math.sqrt(p/r);
 	}
 
+	public double iAusPundU(double p, double u){
+		return p/u;
+	}
+
 	public double Spannung(Calculator calc){
 		if (calc.getWiderstand() != 0  && calc.getStrom() != 0){
 			return calc.getWiderstand()*calc.getStrom();
