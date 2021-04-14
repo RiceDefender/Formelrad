@@ -73,7 +73,9 @@ public class Calculator {
 	public double sAusPundI(double p, double i){
 			return p/i;
 		}
-		return Math.sqrt(calc.getLeistung()*calc.getWiderstand());
+
+	public double uAusPundR(double p, double r){
+		return Math.sqrt(p*r);
 	}
 
 }
