@@ -49,7 +49,12 @@ public class Calculator {
 		 */
 	}
 	
-	/* Hier die Methoden mit den Formlen hinzufügen
+	/* Hier die Methoden mit den Formlen hinzufï¿½gen
 	 */
+	public double Spannung(Calculator calc){
+		if (calc.getWiderstand() != 0  && calc.getStrom() != 0){
+			return calc.getWiderstand()*calc.getStrom();
+		}
+	}
 	
 }
