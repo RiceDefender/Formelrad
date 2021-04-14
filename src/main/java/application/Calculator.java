@@ -1,5 +1,6 @@
 package application;
 
+import java.lang.Math;
 /**
  * Berechnet das Formelrad
  * @author Peter Rutschmann
@@ -58,6 +59,7 @@ public class Calculator {
 		else if (calc.getLeistung() != 0 && calc.getStrom() != 0){
 			return calc.getLeistung()/calc.getStrom();
 		}
+		return Math.sqrt(calc.getLeistung()*calc.getWiderstand());
 	}
 	
 }
