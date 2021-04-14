@@ -55,6 +55,9 @@ public class Calculator {
 		if (calc.getWiderstand() != 0  && calc.getStrom() != 0){
 			return calc.getWiderstand()*calc.getStrom();
 		}
+		else if (calc.getLeistung() != 0 && calc.getStrom() != 0){
+			return calc.getLeistung()/calc.getStrom();
+		}
 	}
 	
 }
