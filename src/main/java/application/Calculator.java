@@ -66,10 +66,9 @@ public class Calculator {
 		return Math.pow(u, 2)/r;
 	}
 
-	public double Spannung(Calculator calc){
-		if (calc.getWiderstand() != 0  && calc.getStrom() != 0){
-			return calc.getWiderstand()*calc.getStrom();
-		}
+	public double sAusRundI(double r, double i) {
+		return r*i;
+	}
 		else if (calc.getLeistung() != 0 && calc.getStrom() != 0){
 			return calc.getLeistung()/calc.getStrom();
 		}
