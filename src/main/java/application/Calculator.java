@@ -54,52 +54,52 @@ public class Calculator {
 	 */
 
 
-	public double pAusUundI(double u, double i){
-		return u*i;
+	public void pAusUundI(){
+		this.leistung = spannung*strom;
 	}
 
-	public double pAusRundI(double r, double i){
-		return r*Math.pow(i, 2);
+	public void pAusRundI(){
+		this.leistung = widerstand*Math.pow(strom, 2);
 	}
 
-	public double pAusUundR(double u, double r){
-		return Math.pow(u, 2)/r;
+	public void pAusUundR(){
+		this.leistung = Math.pow(spannung, 2)/widerstand;
 	}
 
-	public double uAusRundI(double r, double i) {
-		return r*i;
+	public void uAusRundI() {
+		this.spannung = widerstand*strom;
 	}
 
-	public double uAusPundI(double p, double i) {
-		return p / i;
+	public void uAusPundI() {
+		this.spannung = leistung/strom;
 	}
 
-	public double uAusPundR(double p, double r){
-		return Math.sqrt(p*r);
+	public void uAusPundR(){
+		this.spannung = Math.sqrt(leistung*widerstand);
 	}
 
-	public double iAusPundR(double p, double r){
-		return Math.sqrt(p/r);
+	public void iAusPundR(){
+		this.strom = Math.sqrt(leistung/widerstand);
 	}
 
-	public double iAusPundU(double p, double u){
-		return p/u;
+	public void iAusPundU(){
+		this.strom = leistung/spannung;
 	}
 
-	public double iAusUundR(double u, double r) {
-		return u / r;
+	public void iAusUundR() {
+		this.strom = spannung/widerstand;
 	}
 
-	public double rAusUundI(double u, double i){
-		return u/i;
+	public void rAusUundI(){
+		this.widerstand = spannung/strom;
 	}
 
-	public double rAusPundI(double p, double i){
-		return p/(i*i);
+	public void rAusPundI(){
+		this.widerstand = leistung/Math.pow(strom, 2);
 	}
 
-	public double rAusUundP(double u, double p){
-		return (u*u)/p;
+	public void rAusUundP(){
+		this.widerstand = Math.pow(spannung, 2)/leistung;
 	}
 
 }
