@@ -78,4 +78,8 @@ public class Calculator {
 		return Math.sqrt(p*r);
 	}
 
+	public double rAusUundI(double u, double i){
+		return u/i;
+	}
+
 }
