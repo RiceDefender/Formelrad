@@ -81,8 +81,13 @@ public class Calculator {
 	public double rAusUundI(double u, double i){
 		return u/i;
 	}
+
 	public double rAusPundI(double p, double i){
 		return p/(i*i);
+	}
+
+	public double rAusUundP(double u, double p){
+		return (u*u)/p;
 	}
 
 }
