@@ -94,9 +94,10 @@ public class Main extends Application {
 				if(txWiderstand.getText().isEmpty()==false) {
 					resistence = Double.parseDouble(txWiderstand.getText());
 				}
-				Calculator myCalculator = new Calculator(
-						power, tension, current, resistence);
-					
+
+				Calculator myCalculator = new Calculator(power, tension, current, resistence);
+				myCalculator.calculate();
+
 				txLeistung.setText(Double.toString(myCalculator.getLeistung()));
 				txSpannung.setText(Double.toString(myCalculator.getSpannung()));
 				txStrom.setText(Double.toString(myCalculator.getStrom()));
