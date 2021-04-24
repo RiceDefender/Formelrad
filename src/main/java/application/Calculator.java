@@ -1,5 +1,6 @@
 package application;
 
+import java.lang.Math;
 /**
  * Berechnet das Formelrad
  * @author Peter Rutschmann
@@ -47,9 +48,89 @@ public class Calculator {
 		/* Hier auf Grund der vorhanden Werte entscheiden
 		 * welche Methode unten aufgerufen werden muss.
 		 */
+
+		if(leistung != 0.0){
+			if(spannung != 0.0){
+				iAusPundU();
+				rAusUundP();
+			}
+			if(strom != 0.0){
+				uAusPundI();
+				rAusPundI();
+			}
+			if(widerstand != 0.0){
+				uAusPundR();
+				iAusPundR();
+			}
+		}
+		if(spannung != 0.0){
+			if(strom != 0.0){
+				pAusUundI();
+				rAusUundI();
+			}
+			if(widerstand != 0.0){
+				pAusUundR();
+				iAusUundR();
+			}
+		}
+		if(strom != 0.0){
+			if(widerstand != 0.0){
+				pAusRundI();
+				uAusRundI();
+			}
+		}
 	}
 	
-	/* Hier die Methoden mit den Formlen hinzufügen
+	/* Hier die Methoden mit den Formlen hinzufï¿½gen
 	 */
-	
+
+
+	public void pAusUundI(){
+		this.leistung = spannung*strom;
+	}
+
+	public void pAusRundI(){
+		this.leistung = widerstand*Math.pow(strom, 2);
+	}
+
+	public void pAusUundR(){
+		this.leistung = Math.pow(spannung, 2)/widerstand;
+	}
+
+	public void uAusRundI() {
+		this.spannung = widerstand*strom;
+	}
+
+	public void uAusPundI() {
+		this.spannung = leistung/strom;
+	}
+
+	public void uAusPundR(){
+		this.spannung = Math.sqrt(leistung*widerstand);
+	}
+
+	public void iAusPundR(){
+		this.strom = Math.sqrt(leistung/widerstand);
+	}
+
+	public void iAusPundU(){
+		this.strom = leistung/spannung;
+	}
+
+	public void iAusUundR() {
+		this.strom = spannung/widerstand;
+	}
+
+	public void rAusUundI(){
+		this.widerstand = spannung/strom;
+	}
+
+	public void rAusPundI(){
+		this.widerstand = leistung/Math.pow(strom, 2);
+	}
+
+	public void rAusUundP(){
+		this.widerstand = Math.pow(spannung, 2)/leistung;
+	}
+
 }
