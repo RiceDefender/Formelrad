@@ -132,14 +132,17 @@ public class Calculator {
 
 	public void rAusUundI(){
 		this.widerstand = spannung/strom;
+		System.out.println("rAusUundI Methode wurde abgerufen");
 	}
 
 	public void rAusPundI(){
 		this.widerstand = leistung/Math.pow(strom, 2);
+		System.out.println("rAusPundI Methode wurde abgerufen");
 	}
 
 	public void rAusUundP(){
 		this.widerstand = Math.pow(spannung, 2)/leistung;
+		System.out.println("rAusUundP Methode wurde abgerufen");
 	}
 
 }
