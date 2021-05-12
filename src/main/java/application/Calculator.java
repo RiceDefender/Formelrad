@@ -87,14 +87,17 @@ public class Calculator {
 
 	public void pAusUundI(){
 		this.leistung = spannung*strom;
+		System.out.println("pAusUundI Methode wurde abgerufen");
 	}
 
 	public void pAusRundI(){
 		this.leistung = widerstand*Math.pow(strom, 2);
+		System.out.println("pAusRundI Methode wurde abgerufen");
 	}
 
 	public void pAusUundR(){
 		this.leistung = Math.pow(spannung, 2)/widerstand;
+		System.out.println("pAusUundR Methode wurde abgerufen");
 	}
 
 	public void uAusRundI() {
