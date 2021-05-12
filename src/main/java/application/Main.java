@@ -100,6 +100,26 @@ public class Main extends Application {
 					zaehler++;
 				}
 
+				if(power == 0.0){
+					txLeistung.setStyle("-fx-text-inner-color: red;");
+				}else{
+					txLeistung.setStyle("-fx-text-inner-color: black;");
+				}
+				if(tension == 0.0){
+					txSpannung.setStyle("-fx-text-inner-color: red;");
+				}else{
+					txSpannung.setStyle("-fx-text-inner-color: black;");
+				}
+				if(current == 0.0){
+					txStrom.setStyle("-fx-text-inner-color: red;");
+				}else{
+					txStrom.setStyle("-fx-text-inner-color: black;");
+				}
+				if(resistence == 0.0){
+					txWiderstand.setStyle("-fx-text-inner-color: red;");
+				}else{
+					txWiderstand.setStyle("-fx-text-inner-color: black;");
+				}
 
 				Calculator myCalculator = new Calculator(power, tension, current, resistence);
 				if (zaehler == 2) {
