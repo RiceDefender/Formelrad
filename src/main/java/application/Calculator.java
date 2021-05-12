@@ -117,14 +117,17 @@ public class Calculator {
 
 	public void iAusPundR(){
 		this.strom = Math.sqrt(leistung/widerstand);
+		System.out.println("iAusPundR Methode wurde abgerufen");
 	}
 
 	public void iAusPundU(){
 		this.strom = leistung/spannung;
+		System.out.println("iAusPundU Methode wurde abgerufen");
 	}
 
 	public void iAusUundR() {
 		this.strom = spannung/widerstand;
+		System.out.println("iAusUundR Methode wurde abgerufen");
 	}
 
 	public void rAusUundI(){
