@@ -87,50 +87,62 @@ public class Calculator {
 
 	public void pAusUundI(){
 		this.leistung = spannung*strom;
+		System.out.println("pAusUundI Methode wurde abgerufen");
 	}
 
 	public void pAusRundI(){
 		this.leistung = widerstand*Math.pow(strom, 2);
+		System.out.println("pAusRundI Methode wurde abgerufen");
 	}
 
 	public void pAusUundR(){
 		this.leistung = Math.pow(spannung, 2)/widerstand;
+		System.out.println("pAusUundR Methode wurde abgerufen");
 	}
 
 	public void uAusRundI() {
 		this.spannung = widerstand*strom;
+		System.out.println("uAusRundI Methode wurde abgerufen");
 	}
 
 	public void uAusPundI() {
 		this.spannung = leistung/strom;
+		System.out.println("uAusPundI Methode wurde abgerufen");
 	}
 
 	public void uAusPundR(){
 		this.spannung = Math.sqrt(leistung*widerstand);
+		System.out.println("uAusPundR Methode wurde abgerufen");
 	}
 
 	public void iAusPundR(){
 		this.strom = Math.sqrt(leistung/widerstand);
+		System.out.println("iAusPundR Methode wurde abgerufen");
 	}
 
 	public void iAusPundU(){
 		this.strom = leistung/spannung;
+		System.out.println("iAusPundU Methode wurde abgerufen");
 	}
 
 	public void iAusUundR() {
 		this.strom = spannung/widerstand;
+		System.out.println("iAusUundR Methode wurde abgerufen");
 	}
 
 	public void rAusUundI(){
 		this.widerstand = spannung/strom;
+		System.out.println("rAusUundI Methode wurde abgerufen");
 	}
 
 	public void rAusPundI(){
 		this.widerstand = leistung/Math.pow(strom, 2);
+		System.out.println("rAusPundI Methode wurde abgerufen");
 	}
 
 	public void rAusUundP(){
 		this.widerstand = Math.pow(spannung, 2)/leistung;
+		System.out.println("rAusUundP Methode wurde abgerufen");
 	}
 
 }
